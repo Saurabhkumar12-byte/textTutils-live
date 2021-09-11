@@ -117,15 +117,15 @@ export default function TextForm(props) {
           <button className="btn btn-danger mx-2 my-2" onClick={clearFunc}>
             Clear
           </button>
-          <button
+          {/* <button
             className="btn btn-dark my-2"
             onClick={toggleMode}
             id="toggle"
           >
             {buttonText}
-          </button>
+          </button> */}
           <button
-            className="btn btn-success mx-2 my-2"
+            className="btn btn-success me-2 my-2"
             onClick={copyFunc}
             id="copy"
           >
@@ -177,8 +177,8 @@ export default function TextForm(props) {
                 aria-controls="collapseOne"
                 style={{
                   backgroundColor:
-                    props.mode === "dark" ? "rgb(3 2 12 / 93%)" : "white",
-                  color: props.mode === "dark" ? "white" : "black",
+                    props.mode === "dark" ? "#212529" : "white",
+                  color: props.mode === "dark" ? "white" : "#212529",
                   boxShadow:
                     "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px"
                 }}
