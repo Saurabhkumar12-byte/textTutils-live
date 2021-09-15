@@ -62,6 +62,7 @@ export default function TextForm(props) {
     // mybox.select();
     navigator.clipboard.writeText(mybox.value);
     setCopyText("Copied");
+    window.getSelection().removeAllRanges();
     const copy = document.getElementById("copy");
     copy.classList.remove("btn-success");
     copy.classList.add("btn-secondary");
@@ -105,16 +106,16 @@ export default function TextForm(props) {
             onChange={changed}
             placeholder="Do experiments with your text..."
           ></textarea>
-          <button className="btn btn-primary my-2" onClick={uppercaseFunc}>
+          <button disabled={text.length===0} className="btn btn-primary my-2" onClick={uppercaseFunc}>
             Uppercase
           </button>
-          <button className="btn btn-warning my-2 mx-2" onClick={prevFunc}>
+          <button disabled={text.length===0} className="btn btn-warning my-2 mx-2" onClick={prevFunc}>
             Preview
           </button>
-          <button className="btn btn-info my-2" onClick={lowercaseFunc}>
+          <button disabled={text.length===0} className="btn btn-info my-2" onClick={lowercaseFunc}>
             Lowercase
           </button>
-          <button className="btn btn-danger mx-2 my-2" onClick={clearFunc}>
+          <button disabled={text.length===0} className="btn btn-danger mx-2" onClick={clearFunc}>
             Clear
           </button>
           {/* <button
@@ -124,15 +125,16 @@ export default function TextForm(props) {
           >
             {buttonText}
           </button> */}
-          <button
-            className="btn btn-success me-2 my-2"
+          <button disabled={text.length===0}
+            className="btn btn-success me-2 "
             onClick={copyFunc}
             id="copy"
           >
             {copyText}
           </button>
           <button
-            className="btn  my-2"
+            disabled={text.length===0}
+            className="btn  "
             style={{
               backgroundColor: "#e44125",
               border: "#e44125",
@@ -150,11 +152,11 @@ export default function TextForm(props) {
       >
         <h1>Your text summary</h1>
         <p className="fs-5">
-          <strong>{text.split(" ").length - 1}</strong> words{" "}
+          <strong>{text.split(" ").filter((element)=>{return element.length!==0}).length }</strong> words{" "}
           <strong>{text.length}</strong> character
         </p>
         <p className="fs-5">
-          <strong>{0.008 * (text.split(" ").length - 1)}</strong> minutes to
+          <strong>{0.008 * (text.split(" ").filter((element)=>{return element.length!==0}).length )}</strong> minutes to
           read above paragraph
         </p>
       </div>
