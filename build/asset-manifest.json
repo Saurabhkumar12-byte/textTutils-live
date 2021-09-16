@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.30847524.chunk.js",
-    "main.js.map": "/static/js/main.30847524.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4f96abbf.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4f96abbf.js.map",
-    "static/js/2.98c71363.chunk.js": "/static/js/2.98c71363.chunk.js",
-    "static/js/2.98c71363.chunk.js.map": "/static/js/2.98c71363.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.98c71363.chunk.js.LICENSE.txt": "/static/js/2.98c71363.chunk.js.LICENSE.txt"
+    "main.js": "/textTutils-live/static/js/main.30847524.chunk.js",
+    "main.js.map": "/textTutils-live/static/js/main.30847524.chunk.js.map",
+    "runtime-main.js": "/textTutils-live/static/js/runtime-main.3760aab2.js",
+    "runtime-main.js.map": "/textTutils-live/static/js/runtime-main.3760aab2.js.map",
+    "static/js/2.98c71363.chunk.js": "/textTutils-live/static/js/2.98c71363.chunk.js",
+    "static/js/2.98c71363.chunk.js.map": "/textTutils-live/static/js/2.98c71363.chunk.js.map",
+    "index.html": "/textTutils-live/index.html",
+    "static/js/2.98c71363.chunk.js.LICENSE.txt": "/textTutils-live/static/js/2.98c71363.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f96abbf.js",
+    "static/js/runtime-main.3760aab2.js",
     "static/js/2.98c71363.chunk.js",
     "static/js/main.30847524.chunk.js"
   ]

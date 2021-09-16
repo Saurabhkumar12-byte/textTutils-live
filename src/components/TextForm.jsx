@@ -62,7 +62,7 @@ export default function TextForm(props) {
     // mybox.select();
     navigator.clipboard.writeText(mybox.value);
     setCopyText("Copied");
-    window.getSelection().removeAllRanges();
+    
     const copy = document.getElementById("copy");
     copy.classList.remove("btn-success");
     copy.classList.add("btn-secondary");
@@ -152,7 +152,7 @@ export default function TextForm(props) {
       >
         <h1>Your text summary</h1>
         <p className="fs-5">
-          <strong>{text.split(" ").filter((element)=>{return element.length!==0}).length }</strong> words{" "}
+          <strong>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length }</strong> words{" "}
           <strong>{text.length}</strong> character
         </p>
         <p className="fs-5">
