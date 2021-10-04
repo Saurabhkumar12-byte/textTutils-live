@@ -151,7 +151,7 @@ export default function TextForm(props) {
         style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
         <h1>Your text summary</h1>
-        <p className="fs-5">
+        <p className="fs-5"> 
           <strong>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length }</strong> words{" "}
           <strong>{text.length}</strong> character
         </p>
